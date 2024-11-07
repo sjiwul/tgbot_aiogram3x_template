@@ -2,7 +2,7 @@ from typing import Any
 
 from middlewares.anti_flood_middleware import AntiFloodMiddleware
 from registers import main_register
-from . import bot, dp, main_router
+from bot import bot, dp, main_router
 
 
 async def on_startup() -> Any:
