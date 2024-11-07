@@ -7,5 +7,5 @@ async def start(
         message: Message
 ) -> Any:
     await message.answer(
-        "Hello, world!"
+        "<b>Hello, world!</b>"
     )
