@@ -1,6 +1,9 @@
-from aiogram.fsm.storage.redis import RedisStorage
-from redis.asyncio import Redis
+from aiogram.fsm.storage.redis import RedisStorage, Redis, DefaultKeyBuilder
 
 storage = RedisStorage(
-    Redis()
+    redis=Redis(),
+    key_builder=DefaultKeyBuilder(
+        with_bot_id=True,
+        with_destiny=True
+    )
 )
